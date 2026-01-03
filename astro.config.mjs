@@ -56,7 +56,8 @@ export default defineConfig({
 			},
 		}),
 		expressiveCode({
-			themes: [expressiveCodeConfig.theme, expressiveCodeConfig.theme],
+			themes: [expressiveCodeConfig.darkTheme, expressiveCodeConfig.lightTheme],
+			useDarkModeMediaQuery: false,
 			plugins: [
 				pluginCollapsibleSections(),
 				pluginLineNumbers(),
@@ -64,7 +65,7 @@ export default defineConfig({
 				pluginCustomCopyButton()
 			],
 			defaultProps: {
-				wrap: true,
+				wrap: false,
 				overridesByLang: {
 					'shellsession': {
 						showLineNumbers: false,
